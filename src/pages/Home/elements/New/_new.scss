@@ -1,0 +1,17 @@
+.new {
+  padding-top: 60px;
+}
+
+.new__title {
+  font-family: var(--font-accent);
+}
+
+.new__catalog {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new__subtitle {
+  position: absolute;
+  bottom: 4px;
+}

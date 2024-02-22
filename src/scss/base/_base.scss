@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
+@font-face {
+  font-family: "Sunday Best [rus by aLiNcE]";
+  src: url("../../fonts/sunday_best_rus_by_alince.eot"); /* IE 9 Compatibility Mode */
+  src: url("../../fonts/sunday_best_rus_by_alince.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */ url("../../fonts/sunday_best_rus_by_alince.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../fonts/sunday_best_rus_by_alince.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("../../fonts/sunday_best_rus_by_alince.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../fonts/sunday_best_rus_by_alince.svg#sunday_best_rus_by_alince")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+a {
+  color: inherit;
+}
+
+.currentPage {
+  color: var(--accent);
+  font-style: italic;
+  font-size: 18px;
+}
+
+.title-2 {
+  color: var(--accent);
+  font-size: 54px;
+  font-weight: 400;
+  position: relative;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+  font-family: var(--font-main);
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: -83px;
+    top: 6px;
+    width: 65px;
+    height: 15px;
+
+    background-image: url("./../../img/icons/line.svg");
+    background-repeat: no-repeat;
+  }
+}
