@@ -1,0 +1,32 @@
+.marquee {
+  margin-top: 89px;
+  background-color: var(--accent);
+  padding: 24px 0;
+  overflow-x: hidden;
+}
+.marquee__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 77px;
+
+  animation: marquee 10s infinite linear;
+
+  border-top: 2px solid var(--accent-2);
+  border-bottom: 2px solid var(--accent-2);
+  padding: 14px 13px;
+}
+.marquee__item {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--accent-2);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
