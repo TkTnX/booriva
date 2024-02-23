@@ -18,6 +18,13 @@
     }
   }
 }
+
+.card__liked {
+  path {
+    fill: red;
+  }
+}
+
 .card__info {
   padding-top: 27px;
   display: flex;

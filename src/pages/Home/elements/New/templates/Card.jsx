@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./_card.scss";
-import cardData from "./data/card-data";
-export const Card = () => {
+export const Card = ({ title, img, price }) => {
+  const [like, setLike] = useState(false);
+
+  const onClickLike = () => {
+    if (like) {
+      setLike(false);
+      console.log(like);
+    } else {
+      setLike(true);
+      console.log(like);
+    }
+  };
+
   return (
     <div className="card">
-      {cardData.map((value, index) => {})}
       <div className="card__img">
-        <img src={`./img/card/${cardData.img}.png`} alt="card-img" />
-        <div className="card__heart">
+        <img src={img} alt="card-img" />
+        <div
+          className={like ? "card__heart card__liked" : "card__heart"}
+          onClick={onClickLike}
+        >
           <svg
             width="26"
             height="24"
@@ -21,6 +34,10 @@ export const Card = () => {
             />
           </svg>
         </div>
+      </div>
+      <div className="card__info">
+        <h6 className="card__info-title">{title}</h6>
+        <p className="card__info-price">{price}</p>
       </div>
     </div>
   );
